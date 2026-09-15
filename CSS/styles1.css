@@ -10,12 +10,15 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 10px;
     font-family: Arial, sans-serif;
 }
 
 .marco-1-verde {
     background-color: #1c2541;
     padding: 10px;
+    width: 100%;
+    max-width: 680px;
 }
 
 .marco-2-rojo {
@@ -30,7 +33,7 @@ body {
 
 .reproductor {
     display: grid;
-    grid-template-columns: 140px 320px 140px;
+    grid-template-columns: 140px 1fr 140px;
     grid-template-rows: auto auto;
     gap: 10px;
     background-color: #a8dadc;
@@ -87,6 +90,7 @@ body {
     color: #1c2541;
     font-weight: bold;
     font-size: 14px;
+    word-break: break-word;
 }
 
 .seccion-media {
@@ -149,4 +153,41 @@ body {
     padding: 12px;
     font-weight: bold;
     font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .reproductor {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-altavoz {
+        flex-direction: row;
+        height: auto;
+        padding: 10px;
+    }
+
+    .circulo.grande {
+        width: 65px;
+        height: 65px;
+    }
+
+    .circulo.pequeno {
+        width: 32px;
+        height: 32px;
+    }
+
+    .circulo-interno {
+        width: 22px;
+        height: 22px;
+    }
+
+    .seccion-media {
+        height: 140px;
+    }
+
+    .pie-pagina {
+        grid-column: 1;
+        font-size: 12px;
+    }
 }
